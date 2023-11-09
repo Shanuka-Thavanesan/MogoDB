@@ -1,10 +1,10 @@
-** 1. Create a Database called movies.**
+**1. Create a Database called movies.**
 ```
  use movie
 
 switched to db movie
 ```
-** 2. Create a collection called moviedetails.**
+**2. Create a collection called moviedetails.**
 ```
  db.createCollection("moviesdetails")
 
