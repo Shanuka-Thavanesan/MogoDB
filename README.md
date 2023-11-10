@@ -110,7 +110,7 @@ db.moviesdetails.remove({"Movie Title":"Forrest Gump"})
 DeprecationWarning: Collection.remove() is deprecated. Use deleteOne, deleteMany, findOneAndDelete, or bulkWrite.
 { acknowledged: true, deletedCount: 1 }
 ```
-**8. Add the movie which is your favorite. **
+**8. Add the movie which is your favorite.**
 ```
  db.moviesdetails.insertOne({"Movie Title":"Frozen","Type":"Drama","Director":"Jennifer Lee","Release Year":2013})
 
@@ -125,7 +125,7 @@ db.moviesdetails.find({"Director":"Christopher Nolan","Release Year":1994})
 
 empty result
 ```
-**10. List out the Director’s Name in your document. **
+**10. List out the Director’s Name in your document.**
 ```
 db.moviesdetails.distinct("Director")
 
