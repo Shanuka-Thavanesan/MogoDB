@@ -1,16 +1,16 @@
-**1. Create a Database called movies.**
+**1.Create a Database called movies.**
 ```
  use movie
 
 switched to db movie
 ```
-**2. Create a collection called moviedetails.**
+**2.Create a collection called moviedetails.**
 ```
  db.createCollection("moviesdetails")
 
 { ok: 1 }
 ```
-**3. Create the above 5 movie documents into a moviedetails collection.**
+**3.Create the above 5 movie documents into a moviedetails collection.**
 ```
   movie> db.moviesdetails.insertMany([{
 Movie Title:"Jurassic Park",Type:"Adventure",Director:"steven Spielberg",Release year:1993},{Movie Title:"Forrest Gump",Type:"drama",Director:"Robert Zemeckies",Release year:1994},{Movie Title:"Titanic",Type:"Romance",Director:"James Cameron",Release Year:1997},{Movie Tile:"The Dark Knight",Type:"Action",Director:"Christopher Nolan",Release Year:2008},{Movie Title:"Avatar",Type:"Science Fiction",Director:"James Cameron",Release Year:2009}])
@@ -26,7 +26,7 @@ Movie Title:"Jurassic Park",Type:"Adventure",Director:"steven Spielberg",Release
   }
 }
 ```
-**4. List all documents created.**
+**4.List all documents created.**
 ```
 movie> db.moviesdetails.find()
 
@@ -89,7 +89,7 @@ movie> db.moviesdetails.find()
   }
 ]
 ```
-**6. List  James Cameron’s movies released in 2009.**
+**6.List  James Cameron’s movies released in 2009.**
 ```
 db.moviesdetails.find({"Release Year":2009})
 
@@ -103,7 +103,7 @@ db.moviesdetails.find({"Release Year":2009})
   }
 ]
 ```
-**7. Delete the movie which you don’t like.**
+**7.Delete the movie which you don’t like.**
 ```
 db.moviesdetails.remove({"Movie Title":"Forrest Gump"})
 
@@ -119,13 +119,13 @@ DeprecationWarning: Collection.remove() is deprecated. Use deleteOne, deleteMany
   insertedId: ObjectId("654c85f517597cba8b45c154")
 }
 ```
-**9. List movie Directed  by Christopher Nolan in 1994.**
+**9.List movie Directed  by Christopher Nolan in 1994.**
 ```
 db.moviesdetails.find({"Director":"Christopher Nolan","Release Year":1994})
 
 empty result
 ```
-**10. List out the Director’s Name in your document.**
+**10.List out the Director’s Name in your document.**
 ```
 db.moviesdetails.distinct("Director")
 
